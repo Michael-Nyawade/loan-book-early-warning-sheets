@@ -49,15 +49,15 @@ PRODUCT_P = {
 }
 
 # ---- risk settings: the monthly chance a current loan misses a payment
-BASE_HAZARD = 0.010
+BASE_HAZARD = 0.013
 GROUP_RISK = {"Teacher": 0.5, "Civil Servant": 0.6, "Trader/SME": 1.8,
               "Farmer": 1.6, "Other": 1.2}
 VINTAGE_START, VINTAGE_END = pd.Period("2025-03", "M"), pd.Period("2025-08", "M")
 VINTAGE_MULT = 1.8              # loans given out in those months are riskier
-SHOCK_START, SHOCK_END = pd.Period("2026-01", "M"), pd.Period("2026-04", "M")
+SHOCK_START, SHOCK_END = pd.Period("2026-05", "M"), pd.Period("2026-08", "M")
 SHOCK_MULT = 1.7                # a bad patch for everyone in these calendar months
 # Chance a late loan catches up this month, by how many payments it is behind
-CURE_PROB = {1: 0.45, 2: 0.25, 3: 0.08}
+CURE_PROB = {1: 0.40, 2: 0.20, 3: 0.06}
 WRITE_OFF_AT = 6                # 6 missed payments (about 180 days) = written off
 
 
